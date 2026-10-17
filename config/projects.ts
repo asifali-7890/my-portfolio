@@ -1,4 +1,9 @@
-import { ValidCategory, ValidExpType, ValidSkills } from "./constants";
+import {
+  ValidCategory,
+  ValidExpType,
+  ValidSkills,
+} from "./constants";
+
 
 interface PagesInfoInterface {
   title: string;
@@ -13,6 +18,8 @@ interface DescriptionDetailsInterface {
 
 export interface ProjectInterface {
   id: string;
+  videoSrc?: string;
+  title?: string;
   type: ValidExpType;
   companyName: string;
   category: ValidCategory[];
@@ -25,568 +32,1498 @@ export interface ProjectInterface {
   companyLogoImg: any;
   descriptionDetails: DescriptionDetailsInterface;
   pagesInfoArr: PagesInfoInterface[];
+  playbackRate?: number;
 }
 
 export const Projects: ProjectInterface[] = [
+  // 1. PROFESSIONAL EXPERIENCE — MOST IMPORTANT PROJECT
   {
-    id: "portfolio-template",
-    companyName: "Portfolio Website (130+ GitHub stars)",
-    type: "Personal",
-    category: ["Web Dev", "Frontend", "UI/UX"],
-    shortDescription:
-      "Open-source Next.js portfolio template recognized and forked by developers worldwide, optimized for SEO/AEO and performance.",
-    websiteLink: "https://nbarkiya.xyz",
-    githubLink: "https://github.com/namanbarkiya/minimal-next-portfolio",
-    techStack: [
-      "Next.js",
-      "React",
-      "Typescript",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Vercel",
-    ],
-    startDate: new Date("2024-01-01"),
-    endDate: new Date("2025-12-01"),
-    companyLogoImg: "/projects/portfolio/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Landing & Sections",
-        description:
-          "A clean, minimal landing page with sections for skills, projects, contributions, and experience.",
-        imgArr: ["/profile-img.jpg"],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "I created an open-source Next.js portfolio template to help developers ship a modern, responsive portfolio quickly.",
-        "The project focuses heavily on performance, clean typography, and strong SEO/AEO foundations, and it has been adopted and forked by developers globally.",
-      ],
-      bullets: [
-        "Created an open-source Next.js portfolio template recognized and forked by developers worldwide.",
-        "Ranked #1 on ChatGPT search for “best Next.js portfolio template GitHub” through AEO/GEO optimization.",
-        "Maintained a fast, responsive UI with a minimal, themeable design system.",
-      ],
-    },
-  },
-  {
-    id: "convot",
-    companyName: "Convot",
-    type: "Personal",
-    category: ["Full Stack", "Backend", "Web Dev"],
-    shortDescription:
-      "Production-ready AI chatbot platform that crawls, indexes, and embeds knowledge from PDFs/URLs/text to deliver source-grounded answers via a one-line widget.",
-    techStack: ["Next.js", "React", "Node.js", "Typescript", "Python"],
-    startDate: new Date("2024-04-01"),
-    endDate: new Date("2024-10-01"),
-    companyLogoImg: "/projects/convot/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Ingestion & Retrieval",
-        description:
-          "Designed ingestion and retrieval pipelines supporting multiple content sources with secure tenant isolation.",
-        imgArr: ["/logo.png"],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "Convot is a production-ready AI chatbot platform designed to be embedded on any website with a single line widget.",
-        "It supports crawling and indexing knowledge from PDFs, URLs, and plain text, and it returns context-aware, source-grounded answers with integrated analytics.",
-      ],
-      bullets: [
-        "Built a production-ready AI chatbot platform with integrated analytics and a one-line embed widget.",
-        "Designed ingestion and retrieval pipelines to support multiple sources (PDFs, URLs, text) with tenant isolation.",
-        "Focused on reliability, security, and traceable answers by grounding responses in retrieved sources.",
-      ],
-    },
-  },
-  {
-    id: "niya-saas-template",
-    companyName: "Niya SaaS Template (30+ GitHub stars)",
-    type: "Personal",
-    category: ["Full Stack", "Web Dev", "UI/UX"],
-    shortDescription:
-      "Production-ready Next.js 15 template for developers and AI startups. Includes authentication, state management, beautiful UI components, and everything needed to build scalable SaaS applications.",
-    websiteLink: "https://niya.nbarkiya.xyz",
-    githubLink: "https://github.com/namanbarkiya/niya-saas-template",
-    techStack: ["Next.js", "React", "Typescript", "Supabase", "Tailwind CSS"],
-    startDate: new Date("2024-08-01"),
-    endDate: new Date("2025-01-01"),
-    companyLogoImg: "/projects/niya/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Landing Page",
-        description:
-          "Modern landing page showcasing the template features, tech stack, and pricing options.",
-        imgArr: ["/logo.png"],
-      },
-      {
-        title: "Authentication System",
-        description:
-          "Complete authentication system with Supabase, protected routes, and role-based access control.",
-        imgArr: ["/logo.png"],
-      },
-      {
-        title: "Dashboard & Components",
-        description:
-          "Beautiful UI components with Magic UI, Radix primitives, and comprehensive dashboard templates.",
-        imgArr: ["/logo.png"],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "Niya is a production-ready Next.js 15 template designed for developers and AI startups. Built with modern best practices, it includes everything needed to build scalable SaaS applications.",
-        "The template features a complete authentication system with Supabase, beautiful UI components with Magic UI and Radix primitives, state management with Zustand and React Query, and full TypeScript support with Zod validation.",
-        "It's optimized for performance, includes SEO-friendly metadata, and provides a solid foundation for rapid prototyping and production deployment.",
-      ],
-      bullets: [
-        "Created a production-ready Next.js 15 template with complete authentication system and protected routes.",
-        "Integrated Supabase for database, authentication, and real-time features with full TypeScript support.",
-        "Built comprehensive UI component library with Magic UI, Radix primitives, and Tailwind CSS styling.",
-        "Implemented state management with Zustand for client state and React Query for server state management.",
-        "Designed for developers and AI startups with all essential features to start building SaaS products.",
-        "Achieved 30+ GitHub stars and recognition as a comprehensive starter template for modern web applications.",
-      ],
-    },
-  },
-  {
-    id: "portfolio-card",
-    companyName: "Portfolio Card",
-    type: "Personal",
-    category: ["Web Dev", "Frontend", "3D Modeling"],
-    shortDescription:
-      "Forged an immersive 3D Portfolio Card utilizing the prowess of Three.js and Blender, where art and technology converge in an interactive masterpiece.",
-    websiteLink: "https://card.namanbarkiya.xyz/",
-    githubLink: "https://github.com/namanbarkiya/3d-portfolio-card",
-    techStack: ["React", "Javascript", "HTML 5", "CSS 3"],
-    startDate: new Date("2022-03-01"),
-    endDate: new Date("2022-07-01"),
-    companyLogoImg: "/projects/card/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Card Views",
-        description: "Front and back views of the interactive 3D card",
-        imgArr: ["/projects/card/card_2.webp", "/projects/card/card_3.webp"],
-      },
-      {
-        title: "Interactive Elements",
-        description:
-          "Custom links embedded in the 3D model with interactive animations",
-        imgArr: ["/projects/card/card_1.webp"],
-      },
-      {
-        title: "3D Model Development",
-        description: "Blender project showcasing the model creation process",
-        imgArr: ["/projects/card/card_4.webp"],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "In my personal, I've ventured into the world of creativity, fashioning a distinctive portfolio card through the utilization of Three.js.",
-        "This portfolio card transcends convention; it emerges as a captivating 3D model, adorned with meticulous lighting arrangements that conjure a spellbinding visual journey.",
-        "To materialize this concept, I've harnessed the combined potential of Three.js and Blender, orchestrating a meticulous crafting of the central 3D model that serves as the cornerstone of the card's allure.",
-        "Yet, the allure extends beyond aesthetics. I've ingeniously interwoven custom links directly into the fabric of Three.js components. Through the creation and seamless integration of novel components, these additions elegantly rest upon the card's surface, mirroring its rotations and delivering an interactive dimension to my portfolio.",
-        "The portfolio card itself is an opus of motion, perpetually swaying in an auto-rotational dance that unfurls its multifaceted essence. As an enhancement, I've introduced an instinctive user interaction element. A simple, intuitive drag of the card in specific directions grants viewers a comprehensive vantage, enabling exploration from every conceivable angle.",
-        "At its core, my personal epitomizes technical finesse, artistic expression, and interactive design. The amalgamation of Three.js, Blender's prowess, and the innovation of component integration has birthed not only a portfolio card, but a dynamic encounter leaving an indelible imprint on all who partake.",
-      ],
-      bullets: [
-        "Conceptualized and realized a distinct portfolio card using Three.js, highlighting creative exploration.",
-        "Crafted a mesmerizing 3D model enhanced by thoughtful lighting arrangements, resulting in a captivating visual voyage.",
-        "Leveraged the synergy of Three.js and Blender to meticulously sculpt and refine the central 3D model, embodying meticulous attention to detail.",
-        "Innovatively integrated custom links within Three.js components, introducing an interactive layer via seamlessly incorporated new elements.",
-        "Enabled an auto-rotating feature for the portfolio card, perpetually showcasing its various facets to observers.",
-        "Introduced an instinctual user interaction mechanism, allowing viewers to comprehensively explore the card's dimensions through simple, intuitive dragging motions.",
-        "Represented a fusion of technical prowess, artistic ingenuity, and interactive design in a project that reshapes the boundaries of conventional portfolio representation.",
-      ],
-    },
-  },
-  {
-    id: "the-super-focus",
-    companyName: "TheSuperFocus",
-    type: "Personal",
-    category: ["Full Stack", "Web Dev", "UI/UX"],
-    shortDescription:
-      "Pomodoro-inspired productivity web app with real-time sessions and recurring payments.",
-    techStack: [
-      "Next.js",
-      "React",
-      "Node.js",
-      "Socket.io",
-      "Typescript",
-      "MongoDB",
-    ],
-    startDate: new Date("2023-06-01"),
-    endDate: new Date("2023-12-01"),
-    companyLogoImg: "/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Realtime Focus Sessions",
-        description:
-          "Built real-time focus sessions using sockets to help people stay accountable and productive.",
-        imgArr: ["/logo.png"],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "TheSuperFocus is a productivity web app inspired by the Pomodoro technique, built to help users stay focused and complete deep-work sessions.",
-        "It includes real-time session support and a paid tier with recurring billing.",
-      ],
-      bullets: [
-        "Built a Pomodoro-inspired productivity web app using real-time sockets.",
-        "Integrated Razorpay for recurring payments, securing 10+ premium users.",
-      ],
-    },
-  },
-  {
-    id: "built-design",
-    companyName: "Builtdesign",
+    id: "nexus-portal",
+    companyName: "Nexus Portal — Enterprise Management Platform",
     type: "Professional",
-    category: ["Web Dev", "Full Stack", "UI/UX"],
+    category: ["Web Dev", "Frontend", "UI/UX"],
+    videoSrc: "/projects/nexus-portal/nexus-portal-demo.mp4",
+    title: "Nexus Portal full platform walkthrough",
+    playbackRate: 2,
+
     shortDescription:
-      "Developed and optimized a high-performing website catering to over 4000 users, emphasizing efficiency and maintainability.",
-    websiteLink: "https://builtdesign.in",
+      "Enterprise management platform featuring authentication, user and organization management, and security workflows. Contributed to the frontend using Next.js, React, and TypeScript.",
+
+    websiteLink: "https://nexusportal.work/",
+
     techStack: [
       "Next.js",
       "React",
+      "Typescript",
+      "Javascript",
+      "HTML 5",
+      "CSS 3",
+      "Tailwind CSS",
+      "Material UI",
+      "Redux",
       "Node.js",
+      "express.js",
       "MongoDB",
       "GraphQL",
-      "Nest.js",
-      "Typescript",
+      "Docker",
+      "Git",
     ],
-    startDate: new Date("2021-07-01"),
-    endDate: new Date("2022-07-01"),
-    companyLogoImg: "/projects/builtdesign/logo.png",
+
+    startDate: new Date("2025-10-01"),
+    endDate: new Date("2026-09-30"),
+
+    companyLogoImg: "/projects/nexus-portal/nexus-landing.png",
+
     pagesInfoArr: [
       {
-        title: "Landing Page",
+        title: "Platform Overview",
         description:
-          "Modern and responsive landing page showcasing company services and portfolio",
+          "Explore the Nexus Portal landing page and main dashboard, providing an overview of the enterprise platform and its management capabilities.",
         imgArr: [
-          "/projects/builtdesign/landing_1.webp",
-          "/projects/builtdesign/landing_3.webp",
-          "/projects/builtdesign/landing_5.webp",
-          "/projects/builtdesign/landing_6.webp",
-          "/projects/builtdesign/landing_2.webp",
-          "/projects/builtdesign/landing_4.webp",
+          "/projects/nexus-portal/nexus-landing.png",
+          "/projects/nexus-portal/nexus-dashboard.png",
         ],
       },
+
       {
-        title: "Custom PDF Reader and optimizer",
+        title: "Team Management",
         description:
-          "Specialized PDF viewer with optimization features for improved performance and user experience",
-        imgArr: ["/projects/builtdesign/pdf_opt.webp"],
-      },
-      {
-        title: "Clients Dashboard",
-        description:
-          "Comprehensive client portal with project tracking, document management, and communication tools",
+          "Manage team members and departments through organized lists and dedicated workflows for creating departments and managing team information.",
         imgArr: [
-          "/projects/builtdesign/cli_dashboard_1.webp",
-          "/projects/builtdesign/cli_dashboard_2.webp",
-          "/projects/builtdesign/cli_dashboard_3.webp",
+          "/projects/nexus-portal/nexus-team-list.png",
+          "/projects/nexus-portal/nexus-department-list.png",
+          "/projects/nexus-portal/nexus-create-new-department.png",
         ],
       },
+
       {
-        title: "Admin Dashboard",
+        title: "Client Management",
         description:
-          "Powerful administrative interface for managing users, projects, and system settings",
-        imgArr: ["/projects/builtdesign/logo.png"],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "During my time at Builtdesign, I had the opportunity to work on a dynamic and user-focused project that involved designing and optimizing a website catering to a user base of over 4000 individuals. My role as a full-stack web developer was to ensure a seamless experience for users by creating an efficient and maintainable platform.",
-        "I collaborated closely with the product team to integrate cutting-edge features, employing technologies like Next.js and React with TypeScript for captivating front-end experiences. Additionally, I contributed significantly to the backend by utilizing Node.js, MongoDB, and GraphQL to design robust APIs and ensure smooth system functionality.",
-        "This experience allowed me to enhance my skills in various areas of web development and deliver a high-quality product. I gained proficiency in front-end technologies such as Material UI and Tailwind CSS, as well as backend technologies including Nest.js and MySQL. The project's success in catering to a large user base and providing an intuitive user interface has further motivated me to pursue excellence in web development.",
-      ],
-      bullets: [
-        "Developed and optimized a high-performing website catering to over 4000 users.",
-        "Collaborated closely with the product team to implement cutting-edge features.",
-        "Created an intuitive admin dashboard to efficiently manage and announce contest winners.",
-        "Leveraged Next.js, React with TypeScript for captivating front-end experiences.",
-        "Utilized Node.js, MongoDB, and GraphQL to design and manage databases.",
-      ],
-    },
-  },
-  {
-    id: "the-super-quotes",
-    companyName: "The Super Quotes",
-    type: "Professional",
-    category: ["Mobile Dev", "Full Stack", "UI/UX"],
-    shortDescription:
-      "Elevated The Super Quotes app with JavaScript, React Native, APIs, Redux magic, and Google Play Store debut.",
-    websiteLink:
-      "https://play.google.com/store/apps/details?id=com.thesuperlife",
-    techStack: ["React Native", "Node.js", "MongoDB", "Javascript"],
-    startDate: new Date("2021-07-01"),
-    endDate: new Date("2022-07-01"),
-    companyLogoImg: "/projects/superquotes/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Quotes View Page",
-        description:
-          "Elegantly designed quotes display with customizable themes and sharing options",
-        imgArr: ["/projects/superquotes/app_2.webp"],
-      },
-      {
-        title: "Quotes Download Component",
-        description:
-          "Feature allowing users to download quotes as beautiful images for social media sharing",
+          "Browse client records and manage client-related product information through dedicated client and product listing interfaces.",
         imgArr: [
-          "/projects/superquotes/app_4.webp",
-          "/projects/superquotes/app_7.webp",
+          "/projects/nexus-portal/nexus-client-list.png",
+          "/projects/nexus-portal/nexus-client-products.png",
         ],
       },
+
       {
-        title: "Account Management",
+        title: "Workspace Management",
         description:
-          "User profile management with favorites, history, and personalization settings",
-        imgArr: ["/projects/superquotes/app_6.webp"],
-      },
-      {
-        title: "Interest Selection and Update Page",
-        description:
-          "Interactive interface for users to select and update their quote preferences and interests",
+          "Organize workspaces and manage workspace membership through workspace listings and workflows for creating workspaces and adding members.",
         imgArr: [
-          "/projects/superquotes/app_1.webp",
-          "/projects/superquotes/app_3.webp",
+          "/projects/nexus-portal/nexus-workspace-list.png",
+          "/projects/nexus-portal/nexus-create-new-workspace.png",
+          "/projects/nexus-portal/nexus-add-member-to-workspace.png",
         ],
       },
+
       {
-        title: "Responsiveness",
+        title: "Product Management",
         description:
-          "Adaptive design ensuring optimal user experience across various device sizes and orientations",
-        imgArr: ["/projects/superquotes/app_5.webp"],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        `Venturing into the world of creativity at The Super Quotes was an exhilarating journey. As a passionate developer, I led the charge in crafting a compelling application from inception to completion, using the dynamic duo of JavaScript and React Native.`,
-        `The heart of my achievement lay in the seamless integration of APIs, threading a tapestry of data flow that propelled the application's functionality to new heights.`,
-        `With the wizardry of Redux, I choreographed a symphony of state management and performance optimization, orchestrating a ballet of responsiveness that wowed users with every interaction.`,
-        `A crescendo awaited as I unveiled the culmination of my work on the grand stage of the Google Play Store. The app's debut marked an epoch, opening doors to an expansive audience eager to embrace the charm of The Super Quotes.`,
-      ],
-      bullets: [
-        "Led the end-to-end development of a captivating application using JavaScript and React Native.",
-        "Championed the integration of APIs, harmonizing data flow and enhancing application functionality.",
-        "Conducted Redux magic to ensure state management and optimize performance, delivering a mesmerizing user experience.",
-        "Premiered the application on the Google Play Store, capturing hearts and expanding its user base.",
-      ],
-    },
-  },
-  {
-    id: "apex-shopping",
-    companyName: "Apex Shopping App",
-    type: "Personal",
-    category: ["Mobile Dev", "Full Stack", "UI/UX"],
-    shortDescription:
-      "Developed a feature-rich mobile shopping application with admin panel, user authentication, and seamless product management using React Native and Firebase.",
-    githubLink: "https://github.com/namanbarkiya/apex-shopping-app",
-    techStack: ["React Native", "Javascript", "Redux", "Node.js", "express.js"],
-    startDate: new Date("2021-07-14"),
-    endDate: new Date("2022-07-01"),
-    companyLogoImg: "/projects/apex/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Splash Screen",
-        description: "Custom animated splash screen with app branding",
-        imgArr: ["/projects/apex/app_7.webp"],
-      },
-      {
-        title: "Login/Signup Authentication",
-        description: "Secure user authentication system with Firebase",
-        imgArr: ["/projects/apex/app_1.webp"],
-      },
-      {
-        title: "All Products Explore Screen",
-        description: "Interactive product browsing with categories and filters",
-        imgArr: ["/projects/apex/app_3.webp"],
-      },
-      {
-        title: "Admin Panel",
-        description:
-          "Comprehensive admin dashboard for product and order management",
-        imgArr: ["/projects/apex/app_4.webp", "/projects/apex/app_6.webp"],
-      },
-      {
-        title: "Sidenav Navigation",
-        description: "Intuitive side navigation for easy app navigation",
-        imgArr: ["/projects/apex/app_5.webp"],
-      },
-      {
-        title: "Firebase Database",
-        description:
-          "Real-time database structure for efficient data management",
-        imgArr: ["/projects/apex/db.webp"],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "The Apex Shopping App represents a comprehensive mobile e-commerce solution that I developed from the ground up using React Native and Firebase. This project showcases my ability to create a full-featured shopping application with both user and admin functionalities.",
-        "The application features a robust authentication system, allowing users to securely sign up and log in. The product exploration interface is designed with user experience in mind, incorporating smooth navigation and intuitive filtering options.",
-        "One of the key highlights is the admin panel, which provides complete control over product management, order processing, and inventory tracking. The integration with Firebase ensures real-time data synchronization and reliable data persistence.",
-        "The app's architecture emphasizes scalability and performance, utilizing Redux for state management and following best practices for mobile app development. The UI/UX design focuses on providing a seamless shopping experience across different device sizes.",
-      ],
-      bullets: [
-        "Implemented secure user authentication and authorization using Firebase",
-        "Designed and developed an intuitive product browsing and shopping cart system",
-        "Created a comprehensive admin panel for product and order management",
-        "Integrated real-time data synchronization using Firebase Database",
-        "Implemented state management using Redux for optimal performance",
-        "Designed responsive UI components following mobile-first principles",
-        "Incorporated smooth animations and transitions for enhanced user experience",
-      ],
-    },
-  },
-  {
-    id: "builtdesign-blogs",
-    companyName: "Builtdesign Blogs",
-    type: "Professional",
-    category: ["Web Dev", "Full Stack", "UI/UX"],
-    shortDescription:
-      "Crafted Builtdesign's vibrant Blogs Website using Netlify CMS and React for engaging content experiences.",
-    websiteLink: "https://blog.builtdesign.in",
-    techStack: ["Next.js", "React", "Node.js", "MongoDB", "Typescript"],
-    startDate: new Date("2022-03-01"),
-    endDate: new Date("2022-07-01"),
-    companyLogoImg: "/projects/builtdesign-blogs/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Blog Landing Page",
-        description:
-          "Modern and responsive landing page showcasing featured articles",
-        imgArr: ["/projects/builtdesign-blogs/blog_2.webp"],
-      },
-      {
-        title: "Blog Listing",
-        description:
-          "Organized display of all blog posts with search and filtering",
-        imgArr: ["/projects/builtdesign-blogs/blog_3.webp"],
-      },
-      {
-        title: "Category Navigation",
-        description: "Intuitive category-based navigation system",
-        imgArr: ["/projects/builtdesign-blogs/blog_1.webp"],
-      },
-      {
-        title: "Article View",
-        description:
-          "Clean and readable article layout with rich media support",
+          "Manage products and organize product availability across groups and agencies using dedicated product management interfaces.",
         imgArr: [
-          "/projects/builtdesign-blogs/blog_4.webp",
-          "/projects/builtdesign-blogs/blog_5.webp",
+          "/projects/nexus-portal/nexus-add-product.png",
+          "/projects/nexus-portal/nexus-add-group-products.png",
+          "/projects/nexus-portal/nexus-agency-products.png",
+        ],
+      },
+
+      {
+        title: "Member Profiles and Security",
+        description:
+          "View member profile information and security settings through dedicated profile interfaces for account and security management.",
+        imgArr: [
+          "/projects/nexus-portal/nexus-profile-member.png",
+          "/projects/nexus-portal/nexus-profile-security.png",
+        ],
+      },
+
+      {
+        title: "Organization Management",
+        description:
+          "View and manage organization records through a dedicated organization listing interface.",
+        imgArr: [
+          "/projects/nexus-portal/nexus-org-list.png",
         ],
       },
     ],
+
     descriptionDetails: {
       paragraphs: [
-        "As part of the Builtdesign platform, I developed a sophisticated blog website that serves as a content hub for the company's thought leadership and industry insights. The project leveraged Next.js and React to create a fast, SEO-friendly platform.",
-        "The blog platform features a modern, responsive design that prioritizes readability and user engagement. I implemented a robust content management system using Netlify CMS, enabling the content team to easily publish and manage blog posts.",
-        "The architecture includes server-side rendering for optimal performance and SEO, while MongoDB provides flexible content storage. TypeScript ensures code reliability and maintainability throughout the application.",
-        "Key features include category-based navigation, search functionality, and a rich text editor for content creation. The platform supports various content types including images, code snippets, and embedded media.",
+        "Nexus Portal is an enterprise management platform built around a microservices-based architecture. I worked at this company as a dedicated frontend engineer, fully responsible for building the entire frontend of the project over 1.2 years. During this time, I handled all the complexity of developing a robust, maintainable user interface using Next.js, React, and TypeScript.",
+
+        "I managed everything from frontend architecture and integration with backend APIs, to complex state management and asynchronous coding. My work included implementing authentication, user management, organization management, and various security-related workflows. I was also responsible for reusable components, workflow orchestration, handling edge cases, and ensuring scalability, maintainability, and responsiveness throughout the application, etc.",
       ],
+
       bullets: [
-        "Developed a modern blog platform using Next.js and React with TypeScript",
-        "Implemented Netlify CMS for efficient content management",
-        "Created a responsive design that prioritizes readability and user engagement",
-        "Built server-side rendering for optimal performance and SEO",
-        "Integrated MongoDB for flexible content storage and management",
-        "Developed category-based navigation and search functionality",
-        "Implemented rich text editing capabilities for content creation",
+        "Solely developed, maintained, and scaled the entire frontend for Nexus Portal over 1.2 years.",
+        "Designed frontend architecture, managed complex state, and implemented asynchronous programming patterns.",
+        "Built frontend features and custom UIs using Next.js, React, and TypeScript.",
+        "Integrated REST APIs and handled application data with robust async handling.",
+        "Implemented user, organization, and workspace management interfaces.",
+        "Worked extensively on authentication, password management, passkeys, account recovery, and two-factor authentication flows.",
+        "Developed credential history and revocation management features.",
+        "Created and maintained reusable components and ensured a responsive UI.",
+        "Addressed all frontend complexities, error handling, workflow logic, code quality, and worked closely with backend teams, etc.",
       ],
     },
   },
 
+  // 2. HOSPITAL MANAGEMENT WEBSITE
   {
-    id: "cirql-dashboard",
-    companyName: "Cirql Dashboard",
-    type: "Personal",
+    id: "hospital-management",
+    companyName: "MedVista — Hospital Management System",
+    type: "Professional",
     category: ["Web Dev", "Frontend", "UI/UX"],
     shortDescription:
-      "Created a dashboard project using React and Tailwind CSS, focusing on UI design and routing implementation.",
-    websiteLink: "https://cirql-ui.namanbarkiya.xyz/",
-    techStack: ["React", "Tailwind CSS", "Google Auth"],
-    startDate: new Date("2023-01-01"),
-    endDate: new Date("2023-02-15"),
-    companyLogoImg: "/projects/cirql/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Dashboard Home",
-        description:
-          "Main dashboard view with analytics widgets and data visualization",
-        imgArr: ["/projects/cirql/web_1.png", "/projects/cirql/web_2.png"],
-      },
-      {
-        title: "Profile Page",
-        description:
-          "User profile management interface with customization options",
-        imgArr: ["/projects/cirql/web_3.png", "/projects/cirql/web_4.png"],
-      },
+      "A hospital management web application featuring patient records, doctor reports, appointment scheduling, medicine management, and personalized diet planning through an organized, user-friendly interface.",
+    websiteLink: "https://medvista.ardent-start.com/",
+    techStack: [
+      "React",
+      "Javascript",
+      "HTML 5",
+      "CSS 3",
     ],
-    descriptionDetails: {
-      paragraphs: [
-        "For the 'Cirql Dashboard' personal, I aimed to enhance my UI design skills and deepen my understanding of routing within a React application.",
-        "I utilized React and Tailwind CSS to craft an intuitive dashboard interface that provides users with an organized overview of data and functionalities. The UI components were thoughtfully designed to ensure a seamless user experience.",
-        "Incorporating Google Sign-In Authentication further fortified the project by adding a layer of security and convenience. Users are required to authenticate before accessing certain routes, ensuring the safety of sensitive information.",
-        "The routing system was meticulously implemented to enable smooth navigation between different sections of the dashboard, simulating real-world use cases.",
-        "Through this project, I've gained valuable insights into UI/UX design principles and the implementation of secure and efficient routing in React applications.",
-      ],
-      bullets: [
-        "Created a user-friendly dashboard project using React and Tailwind CSS.",
-        "Implemented Google Sign-In Authentication to ensure secure access to sensitive routes.",
-        "Designed UI components to provide an intuitive and visually pleasing experience.",
-        "Focused on implementing a smooth routing system to simulate real-world use cases.",
-        "Enhanced my skills in UI design, routing, and component architecture.",
-      ],
-    },
-  },
-  {
-    id: "inscript-hindi-typing",
-    companyName: "Inscript Hindi Typing",
-    type: "Personal",
-    category: ["Web Dev", "UI/UX"],
-    shortDescription:
-      "Developed a user-friendly website for Inscript Hindi typing, addressing the need for a simple tool for Hindi writers to convey data digitally.",
-    websiteLink: "https://hindityping.namanbarkiya.xyz",
-    githubLink: "https://github.com/namanbarkiya/inscript-hindi-keyboard",
-    techStack: ["HTML 5", "CSS 3", "Javascript"],
-    startDate: new Date("2022-05-01"),
-    endDate: new Date("2022-06-15"),
-    companyLogoImg: "/projects/hindi-keyboard/logo.png",
+    startDate: new Date("2024-10-14"),
+    endDate: new Date("2025-09-30"),
+    companyLogoImg: "/projects/medvista/medvista-login-form.jpg",
+
+    videoSrc: "/projects/medvista/medvista-demo-video.mp4",
+    title: "MedVista Hospital Management System walkthrough",
+    playbackRate: 1,
+
     pagesInfoArr: [
       {
-        title: "Typing Interface",
-        description: "Minimal and user-friendly Inscript Hindi typing area",
-        imgArr: ["/projects/hindi-keyboard/web_1.png"],
+        title: "Dashboard",
+        description:
+          "A centralized dashboard that provides an overview of hospital information and helps users navigate the application's main features.",
+        imgArr: [
+          "/projects/medvista/medvista-dashboard.jpg",
+          "/projects/medvista/medvista-dashboard-list.jpg",
+        ],
       },
       {
-        title: "Copy and Download the file",
+        title: "Patient Management",
         description:
-          "Export functionality allowing users to copy text or download as a document file",
+          "Patient management interfaces for viewing patient records, reviewing details, and adding patient information.",
         imgArr: [
-          "/projects/hindi-keyboard/web_2.png",
-          "/projects/hindi-keyboard/web_3.png",
+          "/projects/medvista/medvista-patient-list.jpg",
+          "/projects/medvista/medvista-patient-list-2.jpg",
+          "/projects/medvista/medvista-add-patient-detail.jpg",
+        ],
+      },
+      {
+        title: "Appointment Management",
+        description:
+          "Appointment interfaces for scheduling appointments and reviewing appointment records.",
+        imgArr: [
+          "/projects/medvista/medvista-appointment-list.jpg",
+          "/projects/medvista/medvista-appoinment-list.jpg",
+          "/projects/medvista/medvista-book-appointment-form.jpg",
+        ],
+      },
+      {
+        title: "Doctor Reports",
+        description:
+          "Doctor report interfaces for presenting medical reporting information in a structured format.",
+        imgArr: [
+          "/projects/medvista/medvista-docters-report.jpg",
+          "/projects/medvista/medvista-docters-reports.jpg",
+          "/projects/medvista/medvista-docters-reportss.jpg",
+        ],
+      },
+      {
+        title: "Medicine Management",
+        description:
+          "A medicine management interface with a form for entering and organizing medicine information.",
+        imgArr: [
+          "/projects/medvista/medvista-add-medicine-form.jpg",
+        ],
+      },
+      {
+        title: "Diet Planning",
+        description:
+          "Diet planning interfaces for presenting weekly diet plans and organizing dietary information.",
+        imgArr: [
+          "/projects/medvista/medvista-dietplan-table.jpg",
+          "/projects/medvista/medvista-weekly-dietplan.jpg",
+        ],
+      },
+      {
+        title: "Possible Causes",
+        description:
+          "An interface for entering and presenting possible causes associated with a patient's condition.",
+        imgArr: [
+          "/projects/medvista/medvista-add-possible-cause.jpg",
+        ],
+      },
+      {
+        title: "Login and Profile",
+        description:
+          "Account interfaces for accessing the application and viewing profile information.",
+        imgArr: [
+          "/projects/medvista/medvista-login-form.jpg",
+          "/projects/medvista/medvista-profile-page.jpg",
         ],
       },
     ],
+
     descriptionDetails: {
       paragraphs: [
-        "The 'Inscript Hindi Typing Website' project emerged from the need to provide a simple and accessible tool for Hindi writers, especially those in digital news and media, who wished to convey data in Hindi.",
-        "Recognizing the challenges posed by complex software in the market, I set out to create a minimalistic typing area that catered to the needs of a vast community of Hindi typists in India.",
-        "The project was designed to address the specific requirements of users familiar with the Inscript keyboard layout, mapping English and Hindi alphabets for seamless typing. The intuitive interface allowed users to effortlessly switch between languages, streamlining the process of content creation.",
-        "Leveraging HTML and CSS, I crafted the website's UI to ensure a user-friendly experience. Additionally, Local Storage was utilized to enable users to save and retrieve their work, enhancing convenience and productivity.",
-        "The website's focus on user experience and simplicity proved to be a key factor in its popularity among Hindi writers. By offering a tool that reduced the barriers to entry, I contributed to the digital empowerment of Hindi typists who previously faced challenges in conveying their message effectively.",
-        "This project marked one of my initial forays into web development and highlighted the transformative potential of technology in addressing real-world challenges.",
+        "MedVista is a hospital management web application designed to bring common healthcare administration workflows together in one interface. It includes features for patient records, appointment scheduling, doctor reports, medicine management, and diet planning.",
+        "The project focuses on organizing healthcare-related information into dedicated screens and forms, with an emphasis on clear navigation, usability, and a responsive user interface.",
       ],
       bullets: [
-        "Developed a user-friendly website for Inscript Hindi typing.",
-        "Catered to the needs of Hindi writers in digital news and media.",
-        "Created a minimalistic and intuitive typing interface for the Inscript keyboard layout.",
-        "Mapped English and Hindi alphabets to provide a seamless typing experience.",
-        "Utilized HTML and CSS to design a user-friendly UI.",
-        "Implemented Local Storage to enable users to save and retrieve their work.",
-        "Contributed to the digital empowerment of Hindi typists by offering a simple tool.",
-        "Marked one of my first web development projects, showcasing technology's potential for addressing real-world needs.",
+        "Developed a hospital management interface using React and JavaScript.",
+        "Created patient listing and patient information forms.",
+        "Built appointment listing and appointment booking interfaces.",
+        "Designed interfaces for doctor reports and possible causes.",
+        "Added medicine management and diet planning screens.",
+        "Created login and user profile interfaces.",
+        "Organized application features into dedicated sections for easier navigation.",
+        "Focused on readable layouts, consistent UI patterns, and usability.",
+      ],
+    },
+  },
+
+  // REAL-TIME CHAT APPLICATION
+  // REAL-TIME CHAT APPLICATION
+  {
+    id: "realtime-chat",
+    companyName: "Real-Time Chat Application",
+    type: "Personal",
+    category: ["Web Dev", "Frontend", "Full Stack"],
+    shortDescription:
+      "A real-time chat application featuring user authentication, new chat creation, and conversation interfaces for seamless messaging.",
+    githubLink:
+      "https://github.com/asifali-7890/Realtime-Chat-Application",
+
+    techStack: [
+      "React",
+      "Typescript",
+      "Javascript",
+      "HTML 5",
+      "CSS 3",
+      "Node.js",
+      "express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "Socket.io",
+    ],
+
+    // Replace with your actual project dates.
+    startDate: new Date("2024-01-01"),
+    endDate: new Date("2024-12-31"),
+
+    companyLogoImg: "/projects/realtime/realtime-login.png",
+
+    videoSrc: "/projects/realtime/realtime-demo-video.mp4",
+    title: "Real-Time Chat Application walkthrough",
+    playbackRate: 2,
+
+    pagesInfoArr: [
+      {
+        title: "User Authentication",
+        description:
+          "A login interface that provides users with access to the chat application.",
+        imgArr: ["/projects/realtime/realtime-login.png"],
+      },
+      {
+        title: "New Chat",
+        description:
+          "An interface for initiating new conversations.",
+        imgArr: ["/projects/realtime/realtime-new-chat.png"],
+      },
+      {
+        title: "Real-Time Conversations",
+        description:
+          "The conversation interface for viewing and participating in chat sessions.",
+        imgArr: [
+          "/projects/realtime/realtime-chat-conversation-happning.png",
+        ],
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "The Real-Time Chat Application is a communication-focused web project featuring user authentication, conversation creation, and a dedicated messaging interface.",
+        "The project organizes the main messaging workflows into a straightforward interface, focusing on usability and a smooth conversation experience.",
+      ],
+      bullets: [
+        "Created a login interface for user access.",
+        "Developed an interface for starting new conversations.",
+        "Built a dedicated conversation interface.",
+        "Organized the application around authentication and messaging workflows.",
+        "Focused on a clear and user-friendly chat experience.",
+      ],
+    },
+  },
+
+  // 3. RAJU CHICKEN — POULTRY E-COMMERCE
+  {
+    id: "raju-chicken",
+    companyName: "Raju Chicken — Poultry E-Commerce",
+    type: "Personal",
+    category: ["Web Dev", "Frontend", "Full Stack"],
+    shortDescription:
+      "A poultry e-commerce website featuring product details, user authentication, checkout, and customer contact pages.",
+    websiteLink: "https://raju-chicken.onrender.com/",
+    githubLink: "https://github.com/asifali-7890/Raju-chicken",
+
+    techStack: [
+      "React",
+      "Javascript",
+      "HTML 5",
+      "CSS 3",
+    ],
+
+    startDate: new Date("2024-01-01"),
+    endDate: new Date("2024-12-31"),
+
+    companyLogoImg: "/projects/rajuchicken/rajuchicken-dashboard.png",
+
+    videoSrc: "/projects/rajuchicken/rajuchicken-demo-video.mp4",
+    title: "Raju Chicken — Poultry E-Commerce Walkthrough",
+    playbackRate: 2,
+
+    pagesInfoArr: [
+      {
+        title: "Dashboard",
+        description:
+          "The main interface for navigating the poultry e-commerce application and exploring its features.",
+        imgArr: [
+          "/projects/rajuchicken/rajuchicken-dashboard.png",
+        ],
+      },
+      {
+        title: "Product Details",
+        description:
+          "A product details page presenting poultry product information and available purchasing options.",
+        imgArr: [
+          "/projects/rajuchicken/rajuchicken-singleproduct-page.png",
+        ],
+      },
+      {
+        title: "Checkout",
+        description:
+          "The checkout interface for proceeding with a purchase.",
+        imgArr: [
+          "/projects/rajuchicken/rajuchicken-checkout-page.png",
+        ],
+      },
+      {
+        title: "User Authentication",
+        description:
+          "The login interface for users accessing the application.",
+        imgArr: [
+          "/projects/rajuchicken/rajuchicken-login-page.png",
+        ],
+      },
+      {
+        title: "Contact Us",
+        description:
+          "A contact page that allows customers to get in touch with the business.",
+        imgArr: [
+          "/projects/rajuchicken/rajuchicken-contactus-page.png",
+        ],
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "Raju Chicken is a poultry e-commerce web application designed to present products and support an online shopping experience through a dedicated product page, authentication interface, and checkout workflow.",
+        "The project brings together product browsing, purchasing-related interfaces, and customer contact information in a single web application, with an emphasis on usability and straightforward navigation.",
+      ],
+      bullets: [
+        "Developed a poultry e-commerce user interface.",
+        "Created a dashboard for navigating the application.",
+        "Built a product details page for displaying product information.",
+        "Implemented user login interface.",
+        "Created a checkout page for the purchasing workflow.",
+        "Developed a contact page for customer inquiries.",
+        "Organized the application into clear, accessible sections.",
+        "Focused on consistent UI patterns and user-friendly navigation.",
+      ],
+    },
+  },
+
+  // 4. ASIF ECOMMERCE
+  {
+    id: "asif-ecommerce",
+    companyName: "Asif Ecommerce — Full-Stack E-Commerce App",
+    type: "Personal",
+    category: ["Full Stack", "Web Dev", "UI/UX"],
+
+    shortDescription:
+      "A MERN-stack e-commerce application featuring product management, product browsing, shopping checkout, order management, and user profile functionality.",
+
+    websiteLink: "https://ecommerce-2025-jdli.onrender.com/",
+    githubLink: "https://github.com/asifali-7890/Ecommerce-2025",
+
+    techStack: [
+      "React",
+      "Javascript",
+      "Node.js",
+      "MongoDB",
+      "express.js",
+    ],
+
+    startDate: new Date("2024-01-01"), // Replace with actual start date
+    endDate: new Date("2024-12-31"),   // Replace with actual end date
+
+    companyLogoImg: "/projects/ecommerce2025/ecommerce2025-dashboard-page.png",
+
+    videoSrc: "/projects/ecommerce2025/ecommerce2025-demo-video.mp4",
+    title: "Asif Ecommerce — Full-Stack E-Commerce Walkthrough",
+    playbackRate: 2,
+
+    pagesInfoArr: [
+      {
+        title: "Dashboard",
+        description:
+          "The main dashboard providing an overview of the e-commerce application.",
+        imgArr: [
+          "/projects/ecommerce2025/ecommerce2025-dashboard-page.png",
+        ],
+      },
+      {
+        title: "Product Listings",
+        description:
+          "Product listing interfaces for browsing and managing products within the application.",
+        imgArr: [
+          "/projects/ecommerce2025/ecommerce2025-all-product-page.png",
+          "/projects/ecommerce2025/ecommerce2025-all-products-page.png",
+        ],
+      },
+      {
+        title: "Product Details",
+        description:
+          "A product details page presenting information about an individual product.",
+        imgArr: [
+          "/projects/ecommerce2025/ecommerce2025-product-details-page.png",
+        ],
+      },
+      {
+        title: "Create New Product",
+        description:
+          "The interface for adding new products to the e-commerce application.",
+        imgArr: [
+          "/projects/ecommerce2025/ecommerce2025-create-new-product-page.png",
+        ],
+      },
+      {
+        title: "Checkout",
+        description:
+          "The checkout interface for progressing through the shopping workflow.",
+        imgArr: [
+          "/projects/ecommerce2025/ecommerce2025-checkout-page.png",
+        ],
+      },
+      {
+        title: "Order Management",
+        description:
+          "An interface for viewing and managing customer orders.",
+        imgArr: [
+          "/projects/ecommerce2025/ecommerce2025-all-orders-page.png",
+        ],
+      },
+      {
+        title: "User Authentication",
+        description:
+          "The login interface for users accessing the application.",
+        imgArr: [
+          "/projects/ecommerce2025/ecommerce2025-login-page.png",
+        ],
+      },
+      {
+        title: "User Profile",
+        description:
+          "The profile interface for displaying user account information.",
+        imgArr: [
+          "/projects/ecommerce2025/ecommerce2025-profile-page.png",
+        ],
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "Asif Ecommerce is a full-stack e-commerce application built using the MERN stack. It demonstrates the integration of a React frontend with backend services and database-driven application data to support an online shopping experience.",
+        "The application includes product browsing, product management, checkout, order management, authentication, and user profile interfaces. It brings these features together in an organized shopping application with a focus on usability and maintainable code.",
+      ],
+
+      bullets: [
+        "Built an e-commerce application using the MERN stack.",
+        "Developed product listing and product details interfaces.",
+        "Created interfaces for adding and managing products.",
+        "Implemented a checkout interface for the shopping workflow.",
+        "Developed an order management page.",
+        "Created login and user profile interfaces.",
+        "Integrated frontend features with backend APIs and database-driven data.",
+        "Focused on consistent UI patterns and a user-friendly shopping experience.",
+      ],
+    },
+  },
+
+  // 5. NETFLIXGPT
+  {
+    id: "netflix-gpt",
+    companyName: "NetflixGPT — AI-Powered Movie Discovery App",
+    type: "Personal",
+    category: ["Web Dev", "Frontend", "UI/UX"],
+    shortDescription:
+      "A Netflix-inspired movie discovery application featuring movie browsing, search functionality, and an AI-oriented discovery experience.",
+
+    websiteLink: "https://netflixgpt-47c21.web.app/",
+    githubLink: "https://github.com/asifali-7890/netflix-gpt",
+
+    techStack: [
+      "React",
+      "Javascript",
+      "Tailwind CSS",
+      "Firebase",
+    ],
+
+    startDate: new Date("2024-01-01"), // Replace with actual start date
+    endDate: new Date("2024-12-31"),   // Replace with actual end date
+
+    companyLogoImg: "/projects/netflixgpt/netflix-dashboard-page.png",
+
+    videoSrc: "/projects/netflixgpt/netflix.mp4",
+    title: "NetflixGPT — Movie Discovery App Walkthrough",
+    playbackRate: 2,
+
+    pagesInfoArr: [
+      {
+        title: "Movie Dashboard",
+        description:
+          "The main interface for exploring movies through a Netflix-inspired browsing experience.",
+        imgArr: [
+          "/projects/netflixgpt/netflix-dashboard-page.png",
+        ],
+      },
+      {
+        title: "Movie Collections",
+        description:
+          "A movie browsing section presenting available titles in an organized visual layout.",
+        imgArr: [
+          "/projects/netflixgpt/netflix-all-movies-section.png",
+        ],
+      },
+      {
+        title: "AI-Oriented Movie Search",
+        description:
+          "The search interface designed to help users discover movies more conveniently.",
+        imgArr: [
+          "/projects/netflixgpt/netflix-search-bar-page.png",
+        ],
+      },
+      {
+        title: "Movie Playback",
+        description:
+          "The movie playback interface for viewing a selected title.",
+        imgArr: [
+          "/projects/netflixgpt/netflix-single-movie-playback.png",
+        ],
+      },
+      {
+        title: "Login",
+        description:
+          "The login interface for user authentication.",
+        imgArr: [
+          "/projects/netflixgpt/netflix-login-page.png",
+        ],
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "NetflixGPT is a Netflix-inspired movie discovery application that combines a streaming-platform-style interface with movie search functionality. It provides users with a visual way to browse titles, explore available movies, and access individual movie experiences.",
+        "The project demonstrates frontend development with React and Tailwind CSS, along with Firebase integration for supporting application services. Its interface is organized around movie discovery, search, authentication, and playback-related screens.",
+      ],
+
+      bullets: [
+        "Developed a Netflix-inspired movie discovery interface using React.",
+        "Created reusable components for organizing the application's UI.",
+        "Built movie browsing sections to present available titles.",
+        "Developed a movie search interface for discovering content.",
+        "Created login and movie playback-related interfaces.",
+        "Integrated Firebase for supporting application services.",
+        "Used Tailwind CSS to style the application interface.",
+        "Focused on responsive layouts and intuitive navigation.",
+      ],
+    },
+  },
+
+  // 6. TOMATO / FOOD DELIVERY APP
+  {
+    id: "tomato-food-app",
+    companyName: "Tomato — Food Delivery App",
+    type: "Personal",
+    category: ["Web Dev", "Frontend", "UI/UX"],
+    shortDescription:
+      "A food delivery application featuring dish browsing, popular food sections, and a checkout interface for a streamlined ordering experience.",
+
+    websiteLink: "https://food-del-c58f2.web.app/",
+    githubLink: "https://github.com/asifali-7890/Foody-Zone",
+
+    techStack: ["React", "Javascript", "CSS 3"],
+
+    startDate: new Date("2024-01-01"), // Replace with actual start date
+    endDate: new Date("2024-12-31"), // Replace with actual end date
+
+    companyLogoImg:
+      "/projects/tomato-food-delivery/tomato-food-delivery-dashboard.png",
+
+    videoSrc:
+      "/projects/tomato-food-delivery/tomato-food-delivery-demo-video.mp4",
+    title: "Tomato — Food Delivery App Walkthrough",
+    playbackRate: 2,
+
+    pagesInfoArr: [
+      {
+        title: "Food Delivery Dashboard",
+        description:
+          "The main interface for exploring the food delivery application and discovering available dishes.",
+        imgArr: [
+          "/projects/tomato-food-delivery/tomato-food-delivery-dashboard.png",
+        ],
+      },
+      {
+        title: "Top Dishes",
+        description:
+          "A dedicated section showcasing popular dishes to help users discover food options.",
+        imgArr: [
+          "/projects/tomato-food-delivery/tomato-food-delivery-top-dishes-section.png",
+        ],
+      },
+      {
+        title: "All Dishes",
+        description:
+          "A food browsing section displaying the available dishes in an organized layout.",
+        imgArr: [
+          "/projects/tomato-food-delivery/tomato-food-delivery-all-dishes-section.png",
+        ],
+      },
+      {
+        title: "Checkout",
+        description:
+          "The checkout interface for reviewing an order and proceeding through the ordering workflow.",
+        imgArr: [
+          "/projects/tomato-food-delivery/tomato-food-delivery-checkout-section..png",
+        ],
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "Tomato is a food delivery web application designed to provide a convenient interface for browsing dishes and navigating the food ordering experience. It includes a main dashboard, popular dish listings, a complete food browsing section, and a checkout interface.",
+        "The project demonstrates frontend development with React and CSS, with an emphasis on reusable UI components, organized content, and straightforward navigation across the food discovery and ordering screens.",
+      ],
+      bullets: [
+        "Developed a food delivery interface using React and JavaScript.",
+        "Created a dashboard for browsing food offerings.",
+        "Built sections for highlighting popular dishes and displaying available food items.",
+        "Designed a checkout interface for the ordering workflow.",
+        "Organized the interface into reusable components.",
+        "Used CSS to style the application and maintain consistent layouts.",
+        "Focused on intuitive navigation and a user-friendly browsing experience.",
+      ],
+    },
+  },
+
+  // 7. BOOKSTORE
+  {
+    id: "bookstore",
+    companyName: "BookStore — Online Book Platform",
+    type: "Personal",
+    category: ["Web Dev", "Frontend", "UI/UX"],
+    shortDescription:
+      "An online bookstore web application featuring a dashboard, book-related content, and dedicated pages for exploring the platform.",
+
+    websiteLink: "https://book-store-six-beta.vercel.app/",
+    githubLink: "https://github.com/asifali-7890/BookStore",
+
+    techStack: ["React", "Javascript", "Tailwind CSS"],
+
+    startDate: new Date("2024-01-01"), // Replace with actual start date
+    endDate: new Date("2024-12-31"), // Replace with actual end date
+
+    companyLogoImg:
+      "/projects/bookstore/bookstore-dashboard-section.png",
+
+    videoSrc: "/projects/bookstore/bookstore-demo-video.mp4",
+    title: "BookStore — Online Book Platform Walkthrough",
+    playbackRate: 2,
+
+    pagesInfoArr: [
+      {
+        title: "BookStore Dashboard",
+        description:
+          "The main interface introducing the bookstore platform and its content.",
+        imgArr: [
+          "/projects/bookstore/bookstore-dashboard-section.png",
+        ],
+      },
+      {
+        title: "Courses Section",
+        description:
+          "A dedicated section presenting the platform's available course-related content.",
+        imgArr: [
+          "/projects/bookstore/bookstore-courses-section.png",
+        ],
+      },
+      {
+        title: "About Us",
+        description:
+          "An informational page introducing the platform and its purpose.",
+        imgArr: [
+          "/projects/bookstore/bookstore-aboutus-section.png",
+        ],
+      },
+      {
+        title: "User Registration",
+        description:
+          "The signup interface for users registering with the platform.",
+        imgArr: [
+          "/projects/bookstore/bookstore-signup-section.png",
+        ],
+      },
+      {
+        title: "Contact Us",
+        description:
+          "A contact page providing an interface for users to get in touch.",
+        imgArr: [
+          "/projects/bookstore/bookstore-contactus-section.png",
+        ],
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "BookStore is a web application designed to present book-related content through an organized and accessible interface. It includes a dashboard alongside dedicated sections for courses, platform information, user registration, and contact details.",
+        "The project demonstrates frontend development with React and Tailwind CSS, emphasizing reusable components, consistent styling, responsive layouts, and straightforward navigation.",
+      ],
+      bullets: [
+        "Developed a bookstore-themed web interface using React and JavaScript.",
+        "Created a dashboard to introduce the platform and its content.",
+        "Built dedicated sections for courses, About Us, and Contact Us.",
+        "Implemented a signup page interface for user registration.",
+        "Organized the application into reusable React components.",
+        "Used Tailwind CSS for consistent styling and responsive layouts.",
+        "Focused on clear navigation and a user-friendly interface.",
+      ],
+    },
+  },
+
+  // 8. BLUENEXT TECHNOLOGIES
+  {
+    id: "bluenext-technologies",
+    companyName: "BlueNext Technologies — Business Website",
+    type: "Personal",
+    category: ["Web Dev", "Frontend", "UI/UX"],
+
+    shortDescription:
+      "A business website presenting software development services through a professional, responsive web interface.",
+
+    websiteLink: "https://company-website-aqsj.onrender.com/",
+    githubLink: "https://github.com/asifali-7890/company-website",
+
+    techStack: [
+      "React",
+      "Javascript",
+      "HTML 5",
+      "CSS 3",
+    ],
+
+    startDate: new Date("2024-01-01"), // Replace with actual start date
+    endDate: new Date("2024-12-31"),   // Replace with actual end date
+
+    companyLogoImg:
+      "/projects/company-website/company-website-dashboard.png",
+
+    videoSrc:
+      "/projects/company-website/company-website-demo-video.mp4",
+    title: "BlueNext Technologies — Business Website Walkthrough",
+    playbackRate: 2,
+
+    pagesInfoArr: [
+      {
+        title: "Website Dashboard",
+        description:
+          "The main landing page introducing BlueNext Technologies and its business offerings.",
+        imgArr: [
+          "/projects/company-website/company-website-dashboard.png",
+        ],
+      },
+      {
+        title: "Services",
+        description:
+          "A dedicated section presenting the company's software development services.",
+        imgArr: [
+          "/projects/company-website/company-website-services.png",
+        ],
+      },
+      {
+        title: "Pricing",
+        description:
+          "A pricing section displaying service plans or pricing information.",
+        imgArr: [
+          "/projects/company-website/company-website-pricing.png",
+        ],
+      },
+      {
+        title: "About Us",
+        description:
+          "An informational section introducing the company and its business.",
+        imgArr: [
+          "/projects/company-website/company-website-about.png",
+        ],
+      },
+      {
+        title: "Contact Form",
+        description:
+          "A contact interface allowing visitors to submit inquiries to the business.",
+        imgArr: [
+          "/projects/company-website/company-website-contact-form.png",
+        ],
+      },
+      {
+        title: "Apply Now",
+        description:
+          "An application interface for visitors interested in available opportunities.",
+        imgArr: [
+          "/projects/company-website/company-website-apply-now.png",
+        ],
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "BlueNext Technologies is a business website designed to present software development services and establish a professional online presence. It organizes company information, service offerings, pricing, and contact options into a structured browsing experience.",
+        "The project demonstrates frontend development with React, JavaScript, HTML, and CSS, with an emphasis on reusable UI components, responsive layouts, and straightforward navigation.",
+      ],
+      bullets: [
+        "Developed a business website using React and JavaScript.",
+        "Created a landing page to introduce the company and its offerings.",
+        "Built dedicated sections for services, pricing, and company information.",
+        "Designed a contact form interface for customer inquiries.",
+        "Created an Apply Now section for application-related interactions.",
+        "Organized the interface into reusable components.",
+        "Used HTML and CSS to structure and style the website.",
+        "Focused on responsive layouts and clear navigation.",
+      ],
+    },
+  },
+
+  // 9. NOTE ZIPPER
+  {
+    id: "note-zipper",
+    companyName: "Note Zipper — Note Management App",
+    type: "Personal",
+    category: ["Web Dev", "Frontend", "UI/UX"],
+
+    shortDescription:
+      "A note-management web application that allows users to create, edit, organize, and manage their personal notes.",
+
+    websiteLink: "https://note-zipper-hts5.onrender.com/",
+    githubLink: "https://github.com/asifali-7890/Note-Zipper",
+
+    techStack: [
+      "React",
+      "Javascript",
+      "Node.js",
+      "MongoDB",
+      "express.js",
+    ],
+
+    startDate: new Date("2024-01-01"), // Replace with actual start date
+    endDate: new Date("2024-12-31"),   // Replace with actual end date
+
+    companyLogoImg: "/projects/notezipper/notezipper-dashboard.png",
+
+    videoSrc: "/projects/notezipper/notezipper-demo-video.mp4",
+    title: "Note Zipper — Note Management App Walkthrough",
+    playbackRate: 2,
+
+    pagesInfoArr: [
+      {
+        title: "Dashboard",
+        description:
+          "The main dashboard provides an interface for accessing and managing notes.",
+        imgArr: [
+          "/projects/notezipper/notezipper-dashboard.png",
+        ],
+      },
+      {
+        title: "Create Note",
+        description:
+          "The note creation interface allows users to write and save new notes.",
+        imgArr: [
+          "/projects/notezipper/notezipper-create-note.png",
+        ],
+      },
+      {
+        title: "Edit Note",
+        description:
+          "The editing interface allows users to update existing notes.",
+        imgArr: [
+          "/projects/notezipper/notezipper-edit-note.png",
+        ],
+      },
+      {
+        title: "User Login",
+        description:
+          "The login page provides an interface for registered users to access their accounts.",
+        imgArr: [
+          "/projects/notezipper/notezipper-login.png",
+        ],
+      },
+      {
+        title: "User Registration",
+        description:
+          "The registration page provides an interface for creating a new user account.",
+        imgArr: [
+          "/projects/notezipper/notezipper-register.png",
+        ],
+      },
+      {
+        title: "User Profile",
+        description:
+          "The profile page displays the user's account information.",
+        imgArr: [
+          "/projects/notezipper/notezipper-profile-page.png",
+        ],
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "Note Zipper is a note-management web application designed to provide users with a straightforward way to create, edit, and manage personal notes. Its interface includes a dashboard, note creation and editing screens, and user account pages.",
+        "The project demonstrates full-stack web development using React on the frontend and Node.js, Express.js, and MongoDB on the backend. It brings together note management and user account interfaces in a single application.",
+      ],
+      bullets: [
+        "Developed a note-management application using React and JavaScript.",
+        "Created a dashboard for accessing and managing notes.",
+        "Built interfaces for creating and editing notes.",
+        "Implemented login and registration page interfaces.",
+        "Created a user profile page.",
+        "Used Node.js and Express.js for backend application functionality.",
+        "Used MongoDB for data storage.",
+        "Focused on a clear interface and straightforward user experience.",
+      ],
+    },
+  },
+
+  // 10. E-COMMERCE PROJECT
+  {
+    id: "e-commerce",
+    companyName: "E-Commerce — Online Shopping Project",
+    type: "Personal",
+    category: ["Full Stack", "Web Dev", "UI/UX"],
+
+    shortDescription:
+      "A full-stack e-commerce application featuring product listings, product management, user authentication, and profile management.",
+
+    websiteLink: "https://e-commerce-foyt.onrender.com/",
+    githubLink: "https://github.com/asifali-7890/E-commerce",
+
+    techStack: [
+      "React",
+      "Javascript",
+      "Node.js",
+      "MongoDB",
+      "express.js",
+    ],
+
+    startDate: new Date("2024-01-01"), // Replace with actual start date
+    endDate: new Date("2024-12-31"),   // Replace with actual end date
+
+    companyLogoImg:
+      "/projects/ecommerce2024/ecommerce2024-productlist.png",
+
+    videoSrc:
+      "/projects/ecommerce2024/eccomerce2024-demo-video.mp4",
+    title: "E-Commerce — Online Shopping Project Walkthrough",
+    playbackRate: 2,
+
+    pagesInfoArr: [
+      {
+        title: "Product Listing",
+        description:
+          "The product listing page presents available products in an organized layout for browsing.",
+        imgArr: [
+          "/projects/ecommerce2024/ecommerce2024-productlist.png",
+        ],
+      },
+      {
+        title: "Add New Product",
+        description:
+          "The product creation interface allows users to enter information when adding a product.",
+        imgArr: [
+          "/projects/ecommerce2024/ecommerce2024-add-new-product.png",
+        ],
+      },
+      {
+        title: "Update Product",
+        description:
+          "The product editing interface allows users to modify existing product information.",
+        imgArr: [
+          "/projects/ecommerce2024/ecommerce2024-update-product.png",
+        ],
+      },
+      {
+        title: "User Login",
+        description:
+          "The login page provides an interface for registered users to access their accounts.",
+        imgArr: [
+          "/projects/ecommerce2024/ecommerce2024-login.png",
+        ],
+      },
+      {
+        title: "User Registration",
+        description:
+          "The registration page provides an interface for creating a user account.",
+        imgArr: [
+          "/projects/ecommerce2024/ecommerce2024-register.png",
+        ],
+      },
+      {
+        title: "User Profile",
+        description:
+          "The profile page displays the user's account information.",
+        imgArr: [
+          "/projects/ecommerce2024/ecommerce2024-profile-page.png",
+        ],
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "This e-commerce project is a web application built around common online shopping and product management workflows. It includes a product listing page, interfaces for adding and updating products, and user account screens for login, registration, and profile management.",
+        "The project demonstrates full-stack web development using React on the frontend and Node.js, Express.js, and MongoDB on the backend, with an emphasis on organizing the application into clear interfaces and reusable components.",
+      ],
+
+      bullets: [
+        "Developed an e-commerce application using React and JavaScript.",
+        "Created a product listing interface for browsing available products.",
+        "Built interfaces for adding new products and updating existing product information.",
+        "Created login and registration page interfaces.",
+        "Developed a user profile page.",
+        "Used Node.js and Express.js for backend application functionality.",
+        "Used MongoDB for data storage.",
+        "Focused on clear navigation and a consistent user interface.",
+      ],
+    },
+  },
+
+  // 11. BUSINESS WEBSITE
+  {
+    id: "business-website",
+    companyName: "Business Website",
+    type: "Personal",
+    category: ["Web Dev", "Frontend", "UI/UX"],
+
+    shortDescription:
+      "A modern business website featuring a professional landing page, service highlights, and a clean, responsive user interface.",
+
+    websiteLink: "https://business-website-fml2.vercel.app/",
+    githubLink: "https://github.com/asifali-7890/Business-Website",
+
+    techStack: [
+      "React",
+      "Javascript",
+      "HTML 5",
+      "CSS 3",
+    ],
+
+    startDate: new Date("2024-01-01"), // Replace with actual start date
+    endDate: new Date("2024-12-31"),   // Replace with actual end date
+
+    companyLogoImg:
+      "/projects/business-website/business-website-dashboard.png",
+
+    videoSrc:
+      "/projects/business-website/business-website-demo-video.mp4",
+    title: "Business Website — Project Walkthrough",
+    playbackRate: 2,
+
+    pagesInfoArr: [
+      {
+        title: "Website Dashboard",
+        description:
+          "The main landing page introduces the website with a professional layout and organized content sections.",
+        imgArr: [
+          "/projects/business-website/business-website-dashboard.png",
+        ],
+      },
+      {
+        title: "Feature Section 1",
+        description:
+          "Highlights key website features using a structured layout designed to make information easy to explore.",
+        imgArr: [
+          "/projects/business-website/business-website-feature-section-1.png",
+        ],
+      },
+      {
+        title: "Feature Section 2",
+        description:
+          "Continues the website's feature presentation with a consistent design and clear content hierarchy.",
+        imgArr: [
+          "/projects/business-website/business-website-feature-section-2.png",
+        ],
+      },
+      {
+        title: "Feature Section 3",
+        description:
+          "Presents additional website content while maintaining a consistent visual style across sections.",
+        imgArr: [
+          "/projects/business-website/business-website-feature-section-3.png",
+        ],
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "This project focuses on building a professional business website that presents information through a clean layout and clearly organized sections. The landing page and feature sections help visitors explore the website's content.",
+        "Built with React, JavaScript, HTML, and CSS, the project emphasizes reusable UI elements, responsive layouts, straightforward navigation, and a consistent visual experience.",
+      ],
+
+      bullets: [
+        "Developed a business-focused website using React and JavaScript.",
+        "Created a landing page with a professional layout.",
+        "Organized website content into dedicated feature sections.",
+        "Used reusable interface elements to maintain design consistency.",
+        "Focused on responsive layouts and user-friendly navigation.",
+        "Applied HTML and CSS to structure and style the interface.",
+      ],
+    },
+  },
+
+  // 12. PERSONAL PORTFOLIO
+  {
+    id: "asif-portfolio",
+    companyName: "Personal Portfolio Website",
+    type: "Personal",
+    category: ["Web Dev", "Frontend", "UI/UX"],
+    shortDescription:
+      "A personal portfolio showcasing software projects, technical skills, and development experience.",
+    websiteLink: "https://portfolio-khaki-seven-10.vercel.app/",
+    githubLink: "https://github.com/asifali-7890/Portfolio",
+    techStack: [
+      "React",
+      "Javascript",
+      "HTML 5",
+      "CSS 3",
+    ],
+    startDate: new Date("2024-01-01"), // Replace with actual dates
+    endDate: new Date("2024-12-31"),
+    companyLogoImg: "/nexus-landing.png",
+    pagesInfoArr: [],
+    descriptionDetails: {
+      paragraphs: [
+        "This portfolio presents my software development projects and provides visitors with an overview of my frontend development experience.",
+        "It brings together project demonstrations and links to source repositories in one place.",
+      ],
+      bullets: [
+        "Created a portfolio to showcase software projects.",
+        "Linked project demonstrations and source repositories.",
+        "Organized project information for recruiters and visitors.",
+      ],
+    },
+  },
+
+  // 13. SAHAND ESTATE — REAL ESTATE PLATFORM
+  {
+    id: "sahand-estate",
+    companyName: "Sahand Estate — Real Estate Platform",
+    type: "Personal",
+    category: ["Full Stack", "Web Dev", "UI/UX"],
+
+    shortDescription:
+      "A full-stack real estate application featuring property listings, search, listing management, user authentication, and profile updates.",
+
+    websiteLink: "https://asif-estate-qc2n.onrender.com/",
+    githubLink: "https://github.com/asifali-7890/Sahand-Estate",
+
+    techStack: [
+      "React",
+      "Javascript",
+      "Node.js",
+      "MongoDB",
+      "express.js",
+    ],
+
+    startDate: new Date("2024-01-01"), // Replace with actual start date
+    endDate: new Date("2024-12-31"),   // Replace with actual end date
+
+    companyLogoImg:
+      "/projects/realestate/realestate-dashboard.png",
+
+    videoSrc:
+      "/projects/realestate/realestate-demo-video.mp4",
+    title: "Sahand Estate — Real Estate Platform Walkthrough",
+    playbackRate: 2,
+
+    pagesInfoArr: [
+      {
+        title: "Dashboard",
+        description:
+          "The main dashboard introduces the real estate application and provides an entry point for exploring property listings.",
+        imgArr: [
+          "/projects/realestate/realestate-dashboard.png",
+        ],
+      },
+      {
+        title: "All Property Listings",
+        description:
+          "The listings page presents available properties in an organized layout, helping users browse real estate options.",
+        imgArr: [
+          "/projects/realestate/realestate-all-listings.png",
+        ],
+      },
+      {
+        title: "Search Listings",
+        description:
+          "The search interface helps users find properties based on available listing search and filtering options.",
+        imgArr: [
+          "/projects/realestate/realestate-search-listings.png",
+        ],
+      },
+      {
+        title: "Property Details",
+        description:
+          "The property details page displays information about an individual listing to help users explore a property.",
+        imgArr: [
+          "/projects/realestate/realestate-single-listing-detail-page.png",
+        ],
+      },
+      {
+        title: "Create Property Listing",
+        description:
+          "The listing creation interface allows users to enter property information and publish a new listing.",
+        imgArr: [
+          "/projects/realestate/realestate-create-listings.png",
+        ],
+      },
+      {
+        title: "Update Property Listing",
+        description:
+          "The listing management interface allows users to edit information for an existing property.",
+        imgArr: [
+          "/projects/realestate/realestate-update-listings.png",
+        ],
+      },
+      {
+        title: "User Login",
+        description:
+          "The login page provides an interface for users to access their accounts.",
+        imgArr: [
+          "/projects/realestate/realestate-login-page.png",
+        ],
+      },
+      {
+        title: "Google Authentication",
+        description:
+          "The authentication screen includes a Google sign-in option for users.",
+        imgArr: [
+          "/projects/realestate/realestate-login-with-google.png",
+        ],
+      },
+      {
+        title: "Update User Profile",
+        description:
+          "The profile management page allows users to update their account information.",
+        imgArr: [
+          "/projects/realestate/realestate-update-profile;.png",
+        ],
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "Sahand Estate is a real estate web application designed to make property discovery and listing management accessible through a single interface. Users can explore property listings, search for properties, view individual listing details, and manage listing information.",
+        "The application demonstrates full-stack web development using React on the frontend and Node.js, Express.js, and MongoDB for backend functionality and data storage. It also includes user authentication, Google sign-in, and profile management interfaces.",
+      ],
+
+      bullets: [
+        "Developed a real estate application using React and JavaScript.",
+        "Created interfaces for browsing and searching property listings.",
+        "Built a detailed view for individual property listings.",
+        "Implemented interfaces for creating and updating property listings.",
+        "Included user login and Google sign-in functionality.",
+        "Created a profile management interface for updating user information.",
+        "Used Node.js and Express.js for backend application functionality.",
+        "Used MongoDB for data storage.",
+        "Focused on organized property information and a user-friendly interface.",
+      ],
+    },
+  },
+
+  // 14. AIRBNB CLONE — BOOKING PLATFORM
+  {
+    id: "airbnb-clone",
+    companyName: "Airbnb Clone — Booking Platform",
+    type: "Personal",
+    category: ["Full Stack", "Web Dev", "UI/UX"],
+
+    shortDescription:
+      "A full-stack accommodation booking application featuring property listings, booking details, checkout, and user authentication.",
+
+    websiteLink: "https://airbnb-client-ntyq.vercel.app/",
+    githubLink: "https://github.com/asifali-7890/AirBnb-Client-Server",
+
+    techStack: [
+      "React",
+      "Javascript",
+      "Node.js",
+      "MongoDB",
+      "express.js",
+    ],
+
+    startDate: new Date("2024-01-01"), // Replace with actual start date
+    endDate: new Date("2024-12-31"),   // Replace with actual end date
+
+    companyLogoImg:
+      "/projects/airbnb/airbnb-dashboard-page.png",
+
+    videoSrc:
+      "/projects/airbnb/airbnb-demo-video.mp4",
+    title: "Airbnb Clone — Booking Platform Walkthrough",
+    playbackRate: 2,
+
+    pagesInfoArr: [
+      {
+        title: "Dashboard",
+        description:
+          "The main page introduces the accommodation booking platform and provides an entry point for exploring available places.",
+        imgArr: [
+          "/projects/airbnb/airbnb-dashboard-page.png",
+        ],
+      },
+      {
+        title: "Available Booking Places",
+        description:
+          "The listings page presents available places in an organized layout, allowing users to browse accommodation options.",
+        imgArr: [
+          "/projects/airbnb/airbnb-all-booking-places.png",
+        ],
+      },
+      {
+        title: "Booking Details",
+        description:
+          "The booking details page displays information about a selected accommodation to help users review their booking.",
+        imgArr: [
+          "/projects/airbnb/airbnb-single-booking-page.png",
+        ],
+      },
+      {
+        title: "Booking Checkout",
+        description:
+          "The checkout page provides an interface for reviewing and proceeding with an accommodation booking.",
+        imgArr: [
+          "/projects/airbnb/airbnb-checkout-booking-page.png",
+        ],
+      },
+      {
+        title: "User Login",
+        description:
+          "The login page provides registered users with an interface to access their accounts.",
+        imgArr: [
+          "/projects/airbnb/airbnb-login-page.png",
+        ],
+      },
+      {
+        title: "User Registration",
+        description:
+          "The registration page provides an interface for new users to create an account.",
+        imgArr: [
+          "/projects/airbnb/airbnb-register-page.png",
+        ],
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "The Airbnb Clone is a web application inspired by accommodation booking platforms. It provides interfaces for exploring available places, viewing individual booking details, and proceeding through the checkout workflow.",
+        "The project demonstrates full-stack web development with React on the frontend and Node.js, Express.js, and MongoDB for backend functionality and data storage. It also includes user authentication interfaces and a structured booking experience.",
+      ],
+
+      bullets: [
+        "Developed an accommodation booking application using React and JavaScript.",
+        "Created interfaces for browsing available accommodation listings.",
+        "Built a page for viewing individual booking details.",
+        "Developed a checkout interface for the booking workflow.",
+        "Created login and registration interfaces.",
+        "Used Node.js and Express.js for backend application functionality.",
+        "Used MongoDB for data storage.",
+        "Focused on clear navigation and a user-friendly booking experience.",
+      ],
+    },
+  },
+
+  // 15. HOTEL BOOKING — MERN ESTATE
+  {
+    id: "hotel-booking",
+    companyName: "Hotel Booking — Accommodation Platform",
+    type: "Personal",
+    category: ["Full Stack", "Web Dev", "UI/UX"],
+
+    shortDescription:
+      "A hotel booking web application featuring a booking-focused dashboard and subscription section, built with the MERN stack.",
+
+    githubLink: "https://github.com/asifali-7890/Booking_App",
+
+    techStack: [
+      "React",
+      "Javascript",
+      "Node.js",
+      "MongoDB",
+      "express.js",
+    ],
+
+    startDate: new Date("2024-01-01"), // Replace with actual start date
+    endDate: new Date("2024-12-31"),   // Replace with actual end date
+
+    companyLogoImg:
+      "/projects/hotelbooking/hotelbooking-dashboard-section.png",
+
+    videoSrc:
+      "/projects/hotelbooking/hotelbooking-demo-video.mp4",
+    title: "Hotel Booking — Project Walkthrough",
+    playbackRate: 2,
+
+    pagesInfoArr: [
+      {
+        title: "Dashboard",
+        description:
+          "The dashboard introduces the hotel booking application and presents its main interface for visitors.",
+        imgArr: [
+          "/projects/hotelbooking/hotelbooking-dashboard-section.png",
+        ],
+      },
+      {
+        title: "Subscription Section",
+        description:
+          "The subscription section presents subscription-related information through a dedicated interface.",
+        imgArr: [
+          "/projects/hotelbooking/hotelbooking-subsribe-section.png",
+        ],
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "This project explores the development of a web application for accommodation-related services, with a focus on presenting information through a clear and accessible interface.",
+        "The project uses the MERN stack, combining React on the frontend with Node.js, Express.js, and MongoDB for full-stack application development. The included screenshots highlight the dashboard and subscription section.",
+      ],
+
+      bullets: [
+        "Developed a web application using React and JavaScript.",
+        "Created a dashboard interface for presenting the application.",
+        "Built a dedicated subscription section.",
+        "Used Node.js and Express.js for backend development.",
+        "Used MongoDB for data storage.",
+        "Focused on organized layouts and a consistent user interface.",
       ],
     },
   },

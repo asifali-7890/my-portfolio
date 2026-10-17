@@ -11,150 +11,93 @@ export const skillsUnsorted: skillsInterface[] = [
   {
     name: "Next.js",
     description:
-      "Effortlessly build dynamic apps with routing, layouts, loading UI, and API routes.",
+      "Develop modern web applications using file-based routing, layouts, server and client components, and API integration.",
     rating: 5,
     icon: Icons.nextjs,
   },
   {
     name: "React",
     description:
-      "Craft interactive user interfaces using components, state, props, and virtual DOM.",
+      "Build component-based user interfaces with reusable components, hooks, state management, and maintainable frontend architecture.",
     rating: 5,
     icon: Icons.react,
   },
   {
-    name: "GraphQL",
+    name: "TypeScript",
     description:
-      "Fetch data precisely with a powerful query language for APIs and runtime execution.",
-    rating: 4,
-    icon: Icons.graphql,
-  },
-  {
-    name: "Nest.js",
-    description:
-      "Create scalable and modular applications with a progressive Node.js framework.",
-    rating: 4,
-    icon: Icons.nestjs,
-  },
-  {
-    name: "express.js",
-    description:
-      "Build web applications and APIs quickly using a fast, unopinionated Node.js framework.",
-    rating: 5,
-    icon: Icons.express,
-  },
-  {
-    name: "Node.js",
-    description:
-      "Run JavaScript on the server side, enabling dynamic and responsive applications.",
-    rating: 5,
-    icon: Icons.nodejs,
-  },
-  {
-    name: "MongoDB",
-    description:
-      "Store and retrieve data seamlessly with a flexible and scalable NoSQL database.",
-    rating: 5,
-    icon: Icons.mongodb,
-  },
-  {
-    name: "Typescript",
-    description:
-      "Enhance JavaScript with static types, making code more understandable and reliable.",
+      "Write more maintainable JavaScript applications using static typing, interfaces, and type-safe component development.",
     rating: 5,
     icon: Icons.typescript,
   },
   {
-    name: "Javascript",
+    name: "JavaScript",
     description:
-      "Create interactive and dynamic web experiences with the versatile scripting language.",
+      "Build interactive web applications using modern JavaScript, asynchronous operations, and browser APIs.",
     rating: 5,
     icon: Icons.javascript,
   },
   {
-    name: "HTML 5",
+    name: "HTML5",
     description:
-      "Structure web content beautifully with the latest version of HyperText Markup Language.",
+      "Create semantic, accessible page structures using modern HTML elements and web standards.",
     rating: 4,
     icon: Icons.html5,
   },
   {
-    name: "CSS 3",
+    name: "CSS3",
     description:
-      "Style web pages creatively with the latest iteration of Cascading Style Sheets.",
+      "Create responsive layouts and polished interfaces using modern CSS styling techniques.",
     rating: 4,
     icon: Icons.css3,
   },
   {
-    name: "React Native",
+    name: "Ant Design",
     description:
-      "Develop cross-platform mobile apps using React for consistent and engaging experiences.",
+      "Build consistent enterprise application interfaces using reusable components, forms, tables, and modals.",
+    rating: 5,
+    icon: Icons.react,
+  },
+  {
+    name: "TanStack Query",
+    description:
+      "Manage asynchronous server state, API requests, caching, and data synchronization in React applications.",
     rating: 4,
     icon: Icons.react,
   },
   {
-    name: "Angular",
+    name: "Axios",
     description:
-      "Build dynamic web apps with a TypeScript-based open-source framework by Google.",
-    rating: 3,
-    icon: Icons.angular,
-  },
-  {
-    name: "Redux",
-    description:
-      "Manage app state effectively using a predictable and centralized state container.",
+      "Integrate frontend applications with HTTP APIs and handle requests and responses.",
     rating: 4,
-    icon: Icons.redux,
+    icon: Icons.javascript,
   },
   {
-    name: "Socket.io",
+    name: "REST API Integration",
     description:
-      "Enable real-time, bidirectional communication between clients and servers effortlessly.",
-    rating: 3,
-    icon: Icons.socketio,
-  },
-  {
-    name: "Material UI",
-    description:
-      "Create stunning and responsive UIs with a popular React UI framework.",
+      "Connect frontend interfaces to backend services and implement API-driven application workflows.",
     rating: 4,
-    icon: Icons.mui,
+    icon: Icons.javascript,
   },
-
+  {
+    name: "NextAuth.js",
+    description:
+      "Work with authentication flows and session-related functionality in Next.js applications.",
+    rating: 4,
+    icon: Icons.nextjs,
+  },
   {
     name: "Tailwind CSS",
     description:
-      "Design beautiful, modern websites faster with a utility-first CSS framework.",
-    rating: 5,
+      "Develop responsive interfaces using utility-first styling and reusable design patterns.",
+    rating: 4,
     icon: Icons.tailwindcss,
   },
   {
-    name: "AWS",
+    name: "Git",
     description:
-      "Utilize Amazon Web Services to build and deploy scalable, reliable, and secure applications.",
-    rating: 3,
-    icon: Icons.amazonaws,
-  },
-  {
-    name: "Bootstrap",
-    description:
-      "Quickly create responsive and appealing web designs using a popular CSS framework.",
-    rating: 2,
-    icon: Icons.bootstrap,
-  },
-  {
-    name: "MySQL",
-    description:
-      "Manage and organize relational databases efficiently for data-driven applications.",
-    rating: 2,
-    icon: Icons.mysql,
-  },
-  {
-    name: "Netlify",
-    description:
-      "Manage and organize relational databases efficiently for data-driven applications.",
+      "Manage source code, track changes, and collaborate through version control workflows.",
     rating: 4,
-    icon: Icons.netlify,
+    icon: Icons.gitHub,
   },
 ];
 

@@ -60,7 +60,15 @@ export type ValidSkills =
   | "FastAPI"
   | "SQL"
   | "NoSQL"
-  | "Framer Motion";
+  | "Framer Motion"
+  | "Ant Design"
+  | "TanStack Query"
+  | "Axios"
+  | "NextAuth.js"
+  | "Redux Toolkit"
+  | "Postman"
+  | "npm"
+  | "Cursor AI";
 
 export type ValidCategory =
   | "Full Stack"

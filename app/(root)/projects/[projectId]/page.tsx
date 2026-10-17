@@ -11,6 +11,7 @@ import { Projects } from "@/config/projects";
 import { siteConfig } from "@/config/site";
 import { cn, formatDateFromObj } from "@/lib/utils";
 import profileImg from "@/public/profile-img.jpg";
+import ProjectVideo from "@/components/projects/project-video";
 
 interface ProjectPageProps {
   params: Promise<{
@@ -115,6 +116,12 @@ export default async function Project({ params }: ProjectPageProps) {
           bullets={project.descriptionDetails.bullets}
         />
       </div>
+
+      <ProjectVideo
+        src={project.videoSrc || ""}
+        title={project.title || ""}
+        playbackRate={project.playbackRate || 1}
+      />
 
       <div className="mb-7 ">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-5">
