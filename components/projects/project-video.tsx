@@ -13,6 +13,7 @@ export default function ProjectVideo({
     playbackRate = 2,
     poster,
 }: ProjectVideoProps) {
+
     return (
         <section className="mb-7">
             <h2 className="mb-3 inline-block font-heading text-3xl leading-tight">
@@ -20,9 +21,8 @@ export default function ProjectVideo({
             </h2>
 
             <p className="mb-4 text-sm text-muted-foreground">
-                Watch the project walkthrough at {playbackRate}× speed.
+                Watch the project walkthrough at {playbackRate} speed.
             </p>
-
             <video
                 controls
                 playsInline

@@ -35,6 +35,53 @@ export interface ProjectInterface {
   playbackRate?: number;
 }
 
+export const PROJECT_VIDEOS = {
+  "nexusportal":
+    "https://res.cloudinary.com/dqyo06eyy/video/upload/v1792332062/nexus-portal-demo.mp4",
+
+  "hospital-management":
+    "https://res.cloudinary.com/dqyo06eyy/video/upload/v1792329974/Medvista-97MB.mp4",
+
+  "asif-ecommerce":
+    "https://res.cloudinary.com/dqyo06eyy/video/upload/v1792330841/ecommerce2025-demo-video.mp4",
+
+  "business-website":
+    "https://res.cloudinary.com/dqyo06eyy/video/upload/v1792330841/business-website-demo-video.mp4",
+
+  "tomato-food-app":
+    "https://res.cloudinary.com/dqyo06eyy/video/upload/v1792330839/tomato-food-delivery-demo-video.mp4",
+
+  "e-commerce":
+    "https://res.cloudinary.com/dqyo06eyy/video/upload/v1792330836/eccomerce2024-demo-video.mp4",
+
+  "bluenext-technologies":
+    "https://res.cloudinary.com/dqyo06eyy/video/upload/v1792330835/company-website-demo-video.mp4",
+
+  "airbnb-clone":
+    "https://res.cloudinary.com/dqyo06eyy/video/upload/v1792330833/airbnb-demo-video.mp4",
+
+  "netflix-gpt":
+    "https://res.cloudinary.com/dqyo06eyy/video/upload/v1792330830/netflix.mp4",
+
+  "bookstore":
+    "https://res.cloudinary.com/dqyo06eyy/video/upload/v1792330827/bookstore-demo-video.mp4",
+
+  "hotel-booking":
+    "https://res.cloudinary.com/dqyo06eyy/video/upload/v1792330827/hotelbooking-demo-video.mp4",
+
+  "note-zipper":
+    "https://res.cloudinary.com/dqyo06eyy/video/upload/v1792330826/notezipper-demo-video.mp4",
+
+  "raju-chicken":
+    "https://res.cloudinary.com/dqyo06eyy/video/upload/v1792330823/rajuchicken-demo-video.mp4",
+
+  "realtime-chat":
+    "https://res.cloudinary.com/dqyo06eyy/video/upload/v1792330818/realtime-demo-video.mp4",
+
+  "sahand-estate":
+    "https://res.cloudinary.com/dqyo06eyy/video/upload/v1792330817/realestate-demo-video.mp4",
+} as const;
+
 export const Projects: ProjectInterface[] = [
   // 1. PROFESSIONAL EXPERIENCE — MOST IMPORTANT PROJECT
   {
@@ -42,7 +89,7 @@ export const Projects: ProjectInterface[] = [
     companyName: "Nexus Portal — Enterprise Management Platform",
     type: "Professional",
     category: ["Web Dev", "Frontend", "UI/UX"],
-    videoSrc: "/projects/nexus-portal/nexus-portal-demo.mp4",
+    videoSrc: PROJECT_VIDEOS["nexusportal"],
     title: "Nexus Portal full platform walkthrough",
     playbackRate: 2,
 
@@ -187,8 +234,7 @@ export const Projects: ProjectInterface[] = [
     startDate: new Date("2024-10-14"),
     endDate: new Date("2025-09-30"),
     companyLogoImg: "/projects/medvista/medvista-login-form.jpg",
-
-    videoSrc: "/projects/medvista/medvista-demo-video.mp4",
+    videoSrc: PROJECT_VIDEOS["hospital-management"],
     title: "MedVista Hospital Management System walkthrough",
     playbackRate: 1,
 
@@ -317,9 +363,9 @@ export const Projects: ProjectInterface[] = [
 
     companyLogoImg: "/projects/realtime/realtime-login.png",
 
-    videoSrc: "/projects/realtime/realtime-demo-video.mp4",
+    videoSrc: PROJECT_VIDEOS["realtime-chat"],
     title: "Real-Time Chat Application walkthrough",
-    playbackRate: 2,
+    playbackRate: 1,
 
     pagesInfoArr: [
       {
@@ -382,9 +428,9 @@ export const Projects: ProjectInterface[] = [
 
     companyLogoImg: "/projects/rajuchicken/rajuchicken-dashboard.png",
 
-    videoSrc: "/projects/rajuchicken/rajuchicken-demo-video.mp4",
+    videoSrc: PROJECT_VIDEOS["raju-chicken"],
     title: "Raju Chicken — Poultry E-Commerce Walkthrough",
-    playbackRate: 2,
+    playbackRate: 1,
 
     pagesInfoArr: [
       {
@@ -473,9 +519,9 @@ export const Projects: ProjectInterface[] = [
 
     companyLogoImg: "/projects/ecommerce2025/ecommerce2025-dashboard-page.png",
 
-    videoSrc: "/projects/ecommerce2025/ecommerce2025-demo-video.mp4",
+    videoSrc: PROJECT_VIDEOS["asif-ecommerce"],
     title: "Asif Ecommerce — Full-Stack E-Commerce Walkthrough",
-    playbackRate: 2,
+    playbackRate: 1,
 
     pagesInfoArr: [
       {
@@ -588,7 +634,7 @@ export const Projects: ProjectInterface[] = [
 
     companyLogoImg: "/projects/netflixgpt/netflix-dashboard-page.png",
 
-    videoSrc: "/projects/netflixgpt/netflix.mp4",
+    videoSrc: PROJECT_VIDEOS["netflix-gpt"],
     title: "NetflixGPT — Movie Discovery App Walkthrough",
     playbackRate: 2,
 
@@ -675,7 +721,7 @@ export const Projects: ProjectInterface[] = [
       "/projects/tomato-food-delivery/tomato-food-delivery-dashboard.png",
 
     videoSrc:
-      "/projects/tomato-food-delivery/tomato-food-delivery-demo-video.mp4",
+      PROJECT_VIDEOS["tomato-food-app"],
     title: "Tomato — Food Delivery App Walkthrough",
     playbackRate: 2,
 
@@ -751,7 +797,7 @@ export const Projects: ProjectInterface[] = [
     companyLogoImg:
       "/projects/bookstore/bookstore-dashboard-section.png",
 
-    videoSrc: "/projects/bookstore/bookstore-demo-video.mp4",
+    videoSrc: PROJECT_VIDEOS["bookstore"],
     title: "BookStore — Online Book Platform Walkthrough",
     playbackRate: 2,
 
@@ -842,7 +888,7 @@ export const Projects: ProjectInterface[] = [
       "/projects/company-website/company-website-dashboard.png",
 
     videoSrc:
-      "/projects/company-website/company-website-demo-video.mp4",
+      PROJECT_VIDEOS["bluenext-technologies"],
     title: "BlueNext Technologies — Business Website Walkthrough",
     playbackRate: 2,
 
@@ -941,9 +987,9 @@ export const Projects: ProjectInterface[] = [
 
     companyLogoImg: "/projects/notezipper/notezipper-dashboard.png",
 
-    videoSrc: "/projects/notezipper/notezipper-demo-video.mp4",
+    videoSrc: PROJECT_VIDEOS["note-zipper"],
     title: "Note Zipper — Note Management App Walkthrough",
-    playbackRate: 2,
+    playbackRate: 1,
 
     pagesInfoArr: [
       {
@@ -1042,7 +1088,7 @@ export const Projects: ProjectInterface[] = [
       "/projects/ecommerce2024/ecommerce2024-productlist.png",
 
     videoSrc:
-      "/projects/ecommerce2024/eccomerce2024-demo-video.mp4",
+      PROJECT_VIDEOS["e-commerce"],
     title: "E-Commerce — Online Shopping Project Walkthrough",
     playbackRate: 2,
 
@@ -1143,7 +1189,7 @@ export const Projects: ProjectInterface[] = [
       "/projects/business-website/business-website-dashboard.png",
 
     videoSrc:
-      "/projects/business-website/business-website-demo-video.mp4",
+      PROJECT_VIDEOS["business-website"],
     title: "Business Website — Project Walkthrough",
     playbackRate: 2,
 
@@ -1199,39 +1245,6 @@ export const Projects: ProjectInterface[] = [
     },
   },
 
-  // 12. PERSONAL PORTFOLIO
-  {
-    id: "asif-portfolio",
-    companyName: "Personal Portfolio Website",
-    type: "Personal",
-    category: ["Web Dev", "Frontend", "UI/UX"],
-    shortDescription:
-      "A personal portfolio showcasing software projects, technical skills, and development experience.",
-    websiteLink: "https://portfolio-khaki-seven-10.vercel.app/",
-    githubLink: "https://github.com/asifali-7890/Portfolio",
-    techStack: [
-      "React",
-      "Javascript",
-      "HTML 5",
-      "CSS 3",
-    ],
-    startDate: new Date("2024-01-01"), // Replace with actual dates
-    endDate: new Date("2024-12-31"),
-    companyLogoImg: "/nexus-landing.png",
-    pagesInfoArr: [],
-    descriptionDetails: {
-      paragraphs: [
-        "This portfolio presents my software development projects and provides visitors with an overview of my frontend development experience.",
-        "It brings together project demonstrations and links to source repositories in one place.",
-      ],
-      bullets: [
-        "Created a portfolio to showcase software projects.",
-        "Linked project demonstrations and source repositories.",
-        "Organized project information for recruiters and visitors.",
-      ],
-    },
-  },
-
   // 13. SAHAND ESTATE — REAL ESTATE PLATFORM
   {
     id: "sahand-estate",
@@ -1260,9 +1273,9 @@ export const Projects: ProjectInterface[] = [
       "/projects/realestate/realestate-dashboard.png",
 
     videoSrc:
-      "/projects/realestate/realestate-demo-video.mp4",
+      PROJECT_VIDEOS["sahand-estate"],
     title: "Sahand Estate — Real Estate Platform Walkthrough",
-    playbackRate: 2,
+    playbackRate: 1,
 
     pagesInfoArr: [
       {
@@ -1386,8 +1399,7 @@ export const Projects: ProjectInterface[] = [
     companyLogoImg:
       "/projects/airbnb/airbnb-dashboard-page.png",
 
-    videoSrc:
-      "/projects/airbnb/airbnb-demo-video.mp4",
+    videoSrc: PROJECT_VIDEOS["airbnb-clone"],
     title: "Airbnb Clone — Booking Platform Walkthrough",
     playbackRate: 2,
 
@@ -1487,8 +1499,7 @@ export const Projects: ProjectInterface[] = [
     companyLogoImg:
       "/projects/hotelbooking/hotelbooking-dashboard-section.png",
 
-    videoSrc:
-      "/projects/hotelbooking/hotelbooking-demo-video.mp4",
+    videoSrc: PROJECT_VIDEOS["hotel-booking"],
     title: "Hotel Booking — Project Walkthrough",
     playbackRate: 2,
 
