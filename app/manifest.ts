@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Naman Barkiya | Applied AI Engineer",
-    short_name: "Naman Barkiya",
+    name: "Asif Ali Quraishi | Software Engineer",
+    short_name: "Asif Ali",
     description:
-      "Naman Barkiya - Applied AI Engineer working at the intersection of AI, data, and scalable software systems.",
+      "Asif Ali Quraishi - Software Engineer specializing in frontend development, full-stack applications, React, Next.js, TypeScript, and modern web technologies.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
@@ -14,22 +14,22 @@ export default function manifest(): MetadataRoute.Manifest {
       {
         src: "/favicon.ico",
         sizes: "64x64",
-        type: "image/png",
+        type: "image/x-icon",
       },
       {
         src: "/favicon.ico",
         sizes: "64x64",
-        type: "image/png",
+        type: "image/x-icon",
         purpose: "maskable",
       },
     ],
     categories: [
       "portfolio",
-      "ai",
       "software engineering",
-      "machine learning",
-      "developer",
       "web development",
+      "frontend development",
+      "full-stack development",
+      "developer",
     ],
     lang: "en",
     dir: "ltr",
