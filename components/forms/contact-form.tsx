@@ -55,18 +55,38 @@ export function ContactForm() {
         body: JSON.stringify(values),
       });
 
-      form.reset();
+      const result = await response.json();
 
-      if (response.status === 200) {
+      if (!response.ok || !result.success) {
+        console.error("Contact form error:", result.error);
+
         storeModal.onOpen({
-          title: "Thankyou!",
+          title: "Unable to send message",
           description:
-            "Your message has been received! I appreciate your contact and will get back to you shortly.",
+            result.error ?? "Please try again in a moment.",
           icon: Icons.successAnimated,
         });
+
+        return;
       }
-    } catch (err) {
-      console.log("Err!", err);
+
+      // Clear the form only after a successful response.
+      form.reset();
+
+      storeModal.onOpen({
+        title: "Thank you!",
+        description:
+          "Your message has been received! I appreciate your contact and will get back to you shortly.",
+        icon: Icons.successAnimated,
+      });
+    } catch (error) {
+      console.error("Contact form submission failed:", error);
+
+      storeModal.onOpen({
+        title: "Something went wrong",
+        description: "Please check your connection and try again.",
+        icon: Icons.successAnimated,
+      });
     }
   }
 
