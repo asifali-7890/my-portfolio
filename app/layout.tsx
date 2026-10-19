@@ -136,8 +136,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
           src="https://app.convot.io/widget-loader.js"
           strategy="afterInteractive"
         />
+        {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
       </body>
-      {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
     </html>
   );
 }
