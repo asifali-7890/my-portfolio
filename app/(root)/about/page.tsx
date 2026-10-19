@@ -1,8 +1,11 @@
+import AboutIntroSection from "@/components/sections/about/AboutIntroSection";
+import EducationTimeline from "@/components/sections/about/EducationTimeline";
+
 export default function AboutPage() {
     return (
         <div>
-            <h1>About</h1>
-            <p>This is a very simple about page.</p>
+            <AboutIntroSection />
+            <EducationTimeline />
         </div>
     );
 }

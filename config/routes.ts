@@ -22,7 +22,7 @@ export const routesConfig: any = {
     },
     {
       title: "About",
-      href: "about"
+      href: "/about"
     },
     {
       title: "Contact",
