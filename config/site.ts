@@ -8,11 +8,11 @@ export const siteConfig = {
   links: {
     linkedin: "https://www.linkedin.com/in/asifaliquraishi/",
     github: "https://github.com/asifali-7890",
-    templateRepo: "https://github.com/asifali-7890",
+    templateRepo: "https://github.com/asifali-7890/my-portfolio",
     twitter: "https://x.com/ali376376",
   },
   ogImage:
-    "https://res.cloudinary.com/dvt5vkfwz/image/upload/v1767384721/naman_portfolio_og_image.png",
+    "https://res.cloudinary.com/dqyo06eyy/image/upload/v1792349917/Modern_Developer_Portfolio_Profile_Card.png",
   iconIco:
     "https://res.cloudinary.com/dbfvcn3f6/image/upload/v1692357384/assets/naman-favicon.ico",
   logoIcon:

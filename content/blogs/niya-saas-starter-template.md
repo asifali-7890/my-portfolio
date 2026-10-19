@@ -12,7 +12,7 @@ Every time I started a new SaaS project, I spent the first 2 weeks on the same b
 
 So I extracted all of it into **Niya** — a free, open-source SaaS starter template that gives you a production-ready foundation in minutes, not weeks. It already has **32 stars** on GitHub and developers are using it for AI dashboards, admin panels, and MVP launches.
 
-**Repo:** [github.com/namanbarkiya/niya-saas-template](https://github.com/namanbarkiya/niya-saas-template)
+**Repo:** [github.com/asifali-7890/niya-saas-template](https://github.com/asifali-7890/niya-saas-template)
 
 ---
 
@@ -156,7 +156,7 @@ If any of these matter to you — star the repo and open an issue. Community sig
 ## Get Started
 
 ```bash
-git clone https://github.com/namanbarkiya/niya-saas-template.git my-app
+git clone https://github.com/asifali-7890/niya-saas-template.git my-app
 cd my-app
 cp .env.example .env   # add your Supabase credentials
 npm install
@@ -165,4 +165,4 @@ npm run dev
 
 That's it. You'll have a fully working app with auth, dashboard, dark mode, and beautiful UI in under 3 minutes.
 
-**Star it if it saves you time:** [github.com/namanbarkiya/niya-saas-template](https://github.com/namanbarkiya/niya-saas-template)
+**Star it if it saves you time:** [github.com/asifali-7890/niya-saas-template](https://github.com/asifali-7890/niya-saas-template)

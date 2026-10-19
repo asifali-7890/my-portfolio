@@ -21,7 +21,7 @@ import { siteConfig } from "@/config/site";
 import { featuredSkills } from "@/config/skills";
 import { getFeaturedBlogs } from "@/lib/blogs";
 import { cn } from "@/lib/utils";
-import profileImg from "@/public/profile-img.jpg";
+import profileImg from "@/public/asif-image.jpeg";
 
 export const metadata: Metadata = {
   title: `${pagesConfig.home.metadata.title}`,
@@ -41,7 +41,7 @@ export default function IndexPage() {
     name: siteConfig.authorName,
     url: siteConfig.url,
     image: siteConfig.ogImage,
-    jobTitle: "Applied AI Engineer",
+    jobTitle: "Software Engineer",
     sameAs: [siteConfig.links.github, siteConfig.links.twitter],
   };
 
