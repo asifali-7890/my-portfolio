@@ -128,10 +128,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <Toaster />
           <ModalProvider />
         </ThemeProvider>
+        <Script id="convot-config" strategy="beforeInteractive">
+          {`window.Convot = { app_id: "app_9b757bc3d887a3eb9a0e0ecc" };`}
+        </Script>
         <Script
-          src="https://convot.xyz/widget.js"
-          data-token="3vpr28Va7E8luRq8DMOStAr9tefOCVqifQ28fpp6grrKS4zflNRZQjQpmeu4os_2nuLmmh1DOshndiN5O1vvGg"
-          data-api-url="https://api.convot.xyz"
+          id="convot-widget"
+          src="https://app.convot.io/widget-loader.js"
           strategy="afterInteractive"
         />
       </body>
